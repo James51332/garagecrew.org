@@ -3,6 +3,10 @@ html, body {
   padding: 0;
 }
 
+:root {
+  --nav-height: 60px;
+}
+
 nav {
   margin:0;
   position:relative;
@@ -27,8 +31,8 @@ nav {
   text-decoration: none;
   text-transform: uppercase;
   padding:0 1em;
-  font-size: 1em;
-  line-height: 50px;
+  font-size: 1.05em;
+  line-height: var(--nav-height);
   font-family:'Barlow', sans-serif;
 }
 
@@ -38,10 +42,10 @@ nav {
   padding:0;
   color:white;
   width:fit-content;
-  font-size: 1.2em;
+  font-size: 1.25em;
   text-emphasis: none;
   font-family:'Barlow', sans-serif;
-  line-height:50px;
+  line-height:var(--nav-height);
   display:inline-flex;
   text-transform: uppercase;
 }
