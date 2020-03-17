@@ -1,0 +1,22 @@
+.heading img {
+  width:50vw;
+  height:50vw;
+  min-width: 500px;
+  min-height: 500px;
+
+  position:absolute;
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.heading {
+  background:#394C56;
+
+}
+
+.neptune-bar {
+  
+}
