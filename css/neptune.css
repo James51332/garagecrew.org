@@ -14,9 +14,18 @@
 
 .heading {
   background:#394C56;
-
 }
 
 .neptune-bar {
-  
+  background:#394C56;
+}
+
+.neptune-bar * {
+  color:#877158;
+}
+
+.neptune-bar * *:hover {
+  text-decoration: underline;
+  background:#394C56;
+  color:#877158;
 }
