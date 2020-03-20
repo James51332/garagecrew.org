@@ -1,8 +1,18 @@
+:root {
+  --neptune-blue:#394C56;
+  --sandy-brown:#877158;
+  --moonlight-silver:#808080;
+}
+
 .heading img {
-  width:50vw;
-  height:50vw;
-  min-width: 500px;
-  min-height: 500px;
+  --width:40vw;
+  --min-width:400px;
+
+  width:var(--width);
+  height:calc(calc(var(--width) / 800) * 107);
+
+  min-width:var(--min-width);
+  min-height:calc(calc(var(--min-width) / 800) * 107);
 
   position:absolute;
   margin:auto;
@@ -13,19 +23,23 @@
 }
 
 .heading {
-  background:#394C56;
+  background:var(--neptune-blue);
 }
 
 .neptune-bar {
-  background:#394C56;
+  background:var(--neptune-blue);
+  height:calc(var(--nav-height) - 2px);
+  border-bottom:2px solid var(--moonlight-silver);
 }
 
 .neptune-bar * {
-  color:#877158;
+  background:none;
+  color:var(--sandy-brown);
 }
 
 .neptune-bar * *:hover {
   text-decoration: underline;
   background:#394C56;
-  color:#877158;
+  height:calc(var(--nav-height) - 2px);
+  color:var(--sandy-brown);
 }
