@@ -1,18 +1,23 @@
 :root {
   --neptune-blue:#394C56;
   --sandy-brown:#877158;
-  --moonlight-silver:#808080;
+  --moonlight-silver:#A9A9A9;
+
+  --nav-color:var(--neptune-blue);
+  --nav-text-color:var(--moonlight-silver);
+
+  --default-text-color:var(--moonlight-silver);
+  --default-accent-color:var(--sandy-brown);
 }
 
-.heading img {
-  --width:40vw;
-  --min-width:400px;
+.neptune-bar * *:hover {
+  text-decoration: underline;
+}
 
-  width:var(--width);
-  height:calc(calc(var(--width) / 800) * 107);
-
-  min-width:var(--min-width);
-  min-height:calc(calc(var(--min-width) / 800) * 107);
+/* Heading Container */
+.heading .heading-center {
+  width:fit-content;
+  height:fit-content;
 
   position:absolute;
   margin:auto;
@@ -22,24 +27,59 @@
   bottom:0;
 }
 
-.heading {
-  background:var(--neptune-blue);
+.heading img {
+  width:50vw;
+  min-width:400px;
+  margin:auto;
+  display:block;
 }
 
-.neptune-bar {
-  background:var(--neptune-blue);
-  height:calc(var(--nav-height) - 2px);
-  border-bottom:2px solid var(--moonlight-silver);
+.heading h2 {
+  text-align: center;
+  width:100%;
+  margin:0;
+  padding:20px 0px;
 }
 
-.neptune-bar * {
-  background:none;
-  color:var(--sandy-brown);
+.segment h2 {
+  font-family:'Poiret One', sans-serif;
+  letter-spacing: 0.2em;
+  font-size:2em;
 }
 
-.neptune-bar * *:hover {
-  text-decoration: underline;
-  background:#394C56;
-  height:calc(var(--nav-height) - 2px);
-  color:var(--sandy-brown);
+.segment a {
+  margin:auto;
+  position:relative;
+  display:block;
+  width:fit-content;
+  border-radius: 40px;
+  border:#f6f8fa solid 2px;
+  box-shadow:0px 1px 2px #24292e;
+  background:#24292e;
+  text-decoration: none;
+  transition:background-color 200ms linear;
+}
+
+.segment a:hover {
+  background-color:#f5f0ff;
+}
+
+.open-src {
+  background:#696969;
+}
+
+.open-src * {
+  color:#f6f8fa;
+}
+
+.extensible, .extensible * {
+  background:var(--moonlight-silver);
+  color:var(--neptune-blue);
+}
+
+.github {
+  line-height:30px;
+  margin:auto;
+  display:block;
+  color:#f6f8fa;
 }

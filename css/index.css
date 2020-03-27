@@ -6,14 +6,26 @@ html, body {
 
 :root {
   --nav-height: 60px;
+  --nav-color:#303040;
+  --nav-text-color:white;
+
+  --default-text-color:white;
+  --default-text-font:'Barlow', sans-serif;
+  --default-accent-color:var(--nav-color);
+}
+
+body * {
+  color:var(--default-text-color);
+  font-family:var(--default-text-font);
 }
 
 nav {
   margin:0;
   position:relative;
-  height:fit-content;
   width:100%;
-  background: #303040;
+  background: var(--nav-color);
+  height:calc(var(--nav-height) - 2px);
+  border-bottom:2px solid var(--default-accent-color);
 }
 
 .nav-container {
@@ -28,12 +40,13 @@ nav {
 
 .nav-el {
   display:inline-flex;
-  color:white;
+  color:var(--nav-text-color);
   text-decoration: none;
   text-transform: uppercase;
   padding:0 1em;
   font-size: 1.05em;
-  line-height: var(--nav-height);
+  line-height:calc(var(--nav-height) - 2px);
+  border-bottom:2px solid var(--default-accent-color);
   font-family:'Barlow', sans-serif;
 }
 
@@ -41,10 +54,10 @@ nav {
   margin:0;
   margin-left: 1em;
   padding: 0;
-  color: white;
+  color: var(--nav-text-color);
   width: fit-content;
   font-size: 1.25em;
-  text-emphasis: none;
+  text-decoration: none;
   font-family: 'Barlow', sans-serif;
   line-height: var(--nav-height);
   display: inline-flex;
@@ -52,8 +65,8 @@ nav {
 }
 
 .nav-el:hover {
-  background: white;
-  color: #303040;
+  background: var(--nav-text-color);
+  color: var(--nav-color);
 }
 
 .heading {
@@ -61,7 +74,7 @@ nav {
   margin:0;
   width:100vw;
   height: calc(100vh - var(--nav-height));
-  background: black;
+  background: var(--nav-color);
   position:relative;
 }
 
@@ -70,15 +83,39 @@ nav {
   padding:0;
 }
 
-@media only screen and (max-width: 720px) {
-  nav {
-    margin:0;
-    position:relative;
-    height:var(--nav-height);
-    width:100%;
-    background: #303040;
-  }
+.container {
+  padding:2em;
+  width:calc(100vw - 4em);
+}
 
+.container * {
+  background:inherit;
+  margin:auto;
+  padding:0.5em;
+}
+
+.segment {
+  max-width:1000px;
+}
+
+.segment p {
+  font-size:1.1em;
+}
+
+.segment * {
+  padding:15px;
+}
+
+.flex *, .flex {
+  display:flex;
+}
+
+.vert *, .vert {
+  display:block;
+}
+
+
+@media only screen and (max-width: 720px) {
   .nav-container {
     padding:0;
     width:100%;
@@ -86,26 +123,10 @@ nav {
 
   .nav-el {
     display:block;
-    color:white;
-    text-decoration: none;
-    text-transform: uppercase;
+    width:100vw;
+    height:var(--nav-height);
     padding:1em 0;
     font-size: 1.05em;
-    line-height: var(--nav-height);
-    font-family:'Barlow', sans-serif;
-  }
-
-  .nav-title {
-    margin:0;
-    margin-left: 1em;
-    padding: 0;
-    color: white;
-    width: fit-content;
-    font-size: 1.25em;
-    text-emphasis: none;
-    font-family: 'Barlow', sans-serif;
-    line-height: var(--nav-height);
-    display: inline-flex;
-    text-transform: uppercase;
+    border:none;
   }
 }
