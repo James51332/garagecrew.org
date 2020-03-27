@@ -78,8 +78,9 @@
 }
 
 .github {
-  line-height:30px;
+  line-height:15px;
   margin:auto;
   display:block;
   color:#f6f8fa;
+  font-size: 0.95em;
 }
