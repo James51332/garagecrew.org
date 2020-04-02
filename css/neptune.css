@@ -40,32 +40,24 @@
   bottom:0;
 }
 
-.heading img {
+.heading .neptune-img {
   width:50vw;
   min-width:400px;
   margin:auto;
   display:block;
 }
 
-.heading h2 {
+.heading .subtitle {
   text-align: center;
   width:100%;
   margin:0;
   padding:20px 0px;
 }
 
-.segment h2 {
+.segment .subtitle {
   font-family:'Poiret One', sans-serif;
   letter-spacing: 0.2em;
   font-size:2em;
-}
-
-.open-src {
-  background:#696969;
-}
-
-.open-src * {
-  color:#f6f8fa;
 }
 
 .extensible, .extensible * {

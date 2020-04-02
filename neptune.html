@@ -7,6 +7,7 @@
 
       <!--CSS Link-->
       <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/navbar.css">
       <link rel="stylesheet" href="css/neptune.css">
 
       <!--Font Link-->
@@ -27,34 +28,36 @@
 
     <div class="heading">
       <div class="heading-center">
-        <img src="img/NeptuneText.png" alt="Neptune">
-        <h2>It's Basically GLFW but I'm gonna add Metal and DirectX</h2>
+        <img class="neptune-img" src="img/NeptuneText.png" alt="Neptune">
+        <h2 class="subtitle">A game engine but the whole thing is procedural</h2>
+        <a class="github-btn" href="https://github.com/James51332/Neptune">
+            <img src="img/Github.png" width="20px" style="padding-right:10px;">
+            <h3>Github Repository</h3>
+        </a>
       </div>
     </div>
 
-    <div class="container open-src">
+    <div class="container" style="background:#696969;">
       <div class="segment">
-        <h2 style="text-align:left;">Open Source</h2>
-        <p>Neptune is an open source library licensed under the Apache License 2.0.
-        It is free to use for commercial purposes and can be modified to custom needs.
-        It operates with the sole purpose of making development more accesible.
-        The source code is available on github.
-        Everything used to develop Neptune is included in the repository.
-        It can be compiled from scratch or a precompiled binary can be downloaded.</p>
+        <h2 class="subtitle" style="text-align:left;color:#f6f8fa;">NeptuneGL</h2>
+        <p style="color:#f6f8fa;">NeptuneGL is a powerful abstraction library that is build in C99.
+        It provides the essential foundation for Neptune.
+        Not only does it handle window and context creation, but it manages
+        all of Neptune's native api tasks.
+        It is open source and licensed under the Apache 2.0 License.</p>
 
         <!-- Link to NeptuneGL Repository-->
         <a class="github-btn" href="https://github.com/James51332/NeptuneGL">
             <img src="img/Github.png" height="20px" style="padding-right:10px;">
             <h3>Github Repository</h3>
         </a>
-
       </div>
     </div>
 
     <div class="container extensible">
       <div class="segment flex">
         <div class="vert">
-        <h2>Extensible</h2>
+        <h2 class="subtitle">Extensible</h2>
         <p>Neptune uses a system of automatically implemented callbacks.
            These allow for the extension of input, error, and frame management systems.
            Rendering exists on a loop that can be either setup by a user or based on a system timer.
