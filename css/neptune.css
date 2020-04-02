@@ -3,8 +3,12 @@
   --sandy-brown:#877158;
   --moonlight-silver:#A9A9A9;
 
-  --nav-color:var(--neptune-blue);
-  --nav-text-color:var(--moonlight-silver);
+  --moonlight-silver-transparent:#A9A9A9AA;
+
+  --nav-color:var(--moonlight-silver);
+  --nav-color-transparent:var(--moonlight-silver-transparent);
+
+  --nav-text-color:var(--neptune-blue);
 
   --default-text-color:var(--moonlight-silver);
   --default-accent-color:var(--sandy-brown);
@@ -14,11 +18,19 @@
   text-decoration: underline;
 }
 
+.nav-el:hover {
+  background-color: var(--nav-color);
+  color: var(--nav-text-color);
+}
+
+.heading {
+  background:var(--neptune-blue);
+}
+
 /* Heading Container */
 .heading .heading-center {
   width:fit-content;
   height:fit-content;
-
   position:absolute;
   margin:auto;
   top:0;

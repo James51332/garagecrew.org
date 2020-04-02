@@ -6,8 +6,10 @@ html, body {
 
 :root {
   --nav-height: 60px;
-  --nav-color:#303040;
-  --nav-text-color:white;
+  --nav-color:#f1f3f5;
+  --nav-color-transparent:#f1f3f5aa;
+  --nav-text-color:#303040;
+  --nav-text-color-transparent:#303040aa;
 
   --default-text-color:white;
   --default-text-font:'Barlow', sans-serif;
@@ -21,11 +23,19 @@ body * {
 
 nav {
   margin:0;
-  position:relative;
+  position:fixed;
+  top:0;
   width:100%;
-  background: var(--nav-color);
-  height:calc(var(--nav-height) - 2px);
-  border-bottom:2px solid var(--default-accent-color);
+  backdrop-filter:blur(6px);
+  background: var(--nav-color-transparent);
+  height:var(--nav-height);
+  z-index: 2;
+}
+
+.filler {
+  width:100%;
+  height:var(--nav-height);
+  display:block;
 }
 
 .nav-container {
@@ -45,8 +55,7 @@ nav {
   text-transform: uppercase;
   padding:0 1em;
   font-size: 1.05em;
-  line-height:calc(var(--nav-height) - 2px);
-  border-bottom:2px solid var(--default-accent-color);
+  line-height:var(--nav-height);
   font-family:'Barlow', sans-serif;
 }
 
@@ -65,8 +74,10 @@ nav {
 }
 
 .nav-el:hover {
-  background: var(--nav-text-color);
+  background: var(--nav-text-color-transparent);
+  backdrop-filter:blur(6px);
   color: var(--nav-color);
+  height:var(--nav-height);
 }
 
 .heading {
@@ -95,7 +106,7 @@ nav {
 }
 
 .segment {
-  max-width:1000px;
+  max-width:900px;
 }
 
 .segment p {
@@ -112,21 +123,4 @@ nav {
 
 .vert *, .vert {
   display:block;
-}
-
-
-@media only screen and (max-width: 720px) {
-  .nav-container {
-    padding:0;
-    width:100%;
-  }
-
-  .nav-el {
-    display:block;
-    width:100vw;
-    height:var(--nav-height);
-    padding:1em 0;
-    font-size: 1.05em;
-    border:none;
-  }
 }
