@@ -20,6 +20,7 @@
 
 .nav-el:hover {
   background-color: var(--nav-color);
+  text-decoration: none;
   color: var(--nav-text-color);
 }
 
