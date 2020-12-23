@@ -4,8 +4,8 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "img/favicon-96x96.png",
-      "sizes": "96",
+      "src": "img/icon.png",
+      "sizes": "1024",
       "type": "image/png"
     }
   ],
