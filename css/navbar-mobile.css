@@ -1,0 +1,113 @@
+@media only screen and (max-width: 539px) {
+  .navbar {
+    margin: 0;
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--navbar-color);
+  }
+
+  .navbar ul,
+  .navbar-link {
+    display: none;
+  }
+
+  .navbar-title {
+    --top-padding: 5px;
+    line-height: calc(var(--navbar-height) + calc(var(--top-padding) / 2));
+    text-decoration: none;
+    padding-left: 10px;
+    color: var(--navbar-text-color);
+    font-size: 1.2em;
+  }
+
+  :root {
+    --hamburger-height: calc(var(--navbar-height) - 35px);
+  }
+
+  .navbar-btn {
+    width: calc(var(--hamburger-height) + 5);
+    height: var(--hamburger-height);
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    margin: calc(calc(var(--navbar-height) - var(--hamburger-height)) / 2) 0px;
+  }
+
+  .navbar-btn .bar1 {
+    margin-bottom: calc(var(--hamburger-height) / 5);
+    display: block;
+    background-color: var(--navbar-text-color);
+    width: calc(var(--hamburger-height) + 5px);
+    height: calc(var(--hamburger-height) / 5);
+    border-radius: calc(var(--hamburger-height) / 10);
+
+    transition-duration: 250ms;
+    transition-property: transform;
+  }
+
+  .navbar-btn .bar2 {
+    display: block;
+    background-color: var(--navbar-text-color);
+    width: calc(var(--hamburger-height) + 5px);
+    height: calc(var(--hamburger-height) / 5);
+    border-radius: calc(var(--hamburger-height) / 10);
+    margin-bottom: calc(var(--hamburger-height) / 5);
+
+    transition-duration: 250ms;
+    transition-property: opacity;
+  }
+
+  .navbar-btn .bar3 {
+    display: block;
+    background-color: var(--navbar-text-color);
+    width: calc(var(--hamburger-height) + 5px);
+    height: calc(var(--hamburger-height) / 5);
+    border-radius: calc(var(--hamburger-height) / 10);
+    transition-duration: 250ms;
+    transition-property: transform;
+  }
+
+  .navbar-open .bar1 {
+    transform: translate(0px, 10px) rotate(45deg);
+  }
+
+  .navbar-open .bar2 {
+    opacity: 0;
+  }
+
+  .navbar-open .bar3 {
+    transform: translate(0px, -10px) rotate(-45deg);
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+    transition: 100ms opacity;
+    color: white;
+    opacity: 0;
+    font-size: 1.2em;
+  }
+
+  .navbar-mobile {
+    position: fixed;
+    width: 0%;
+    height: 100%;
+    transition: 250ms;
+    background: #000000dd;
+  }
+
+  .navbar-link:first-of-type {
+    margin-top: 2em;
+  }
+
+  .navbar-link-open {
+    opacity: 1;
+  }
+
+  .navbar-panel-open {
+    width: 100%;
+  }
+}
