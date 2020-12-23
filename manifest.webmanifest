@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "Garage Crew Website for Garage Crew YouTube Channel.",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/favicon-96x96.png",
+      "sizes": "96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Garage Crew",
+  "short_name": "Garage Crew",
+  "start_url": "index.html"
+}
